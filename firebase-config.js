@@ -1,11 +1,11 @@
-// Copiez ici les paramètres de VOTRE application Web dans Firebase Console > Paramètres du projet.
-// Ces paramètres identifient le projet et ne sont pas un mot de passe.
-// La sécurité repose sur Firebase Authentication ET les règles Firestore.
+// Configuration publique Firebase du projet MACE Mobilité.
+// Cette configuration est prévue pour le navigateur. Les règles Firestore protègent les données.
 export const firebaseConfig = {
-  apiKey: "VOTRE_API_KEY",
-  authDomain: "VOTRE_PROJET.firebaseapp.com",
-  projectId: "VOTRE_PROJECT_ID",
-  storageBucket: "VOTRE_PROJET.firebasestorage.app",
-  messagingSenderId: "VOTRE_MESSAGING_SENDER_ID",
-  appId: "VOTRE_APP_ID"
+  apiKey: "AIzaSyB4hCgDq5S3rKbyUYJdUHidf_SIcywMiq8",
+  authDomain: "mace-mobilite.firebaseapp.com",
+  projectId: "mace-mobilite",
+  storageBucket: "mace-mobilite.firebasestorage.app",
+  messagingSenderId: "866582134847",
+  appId: "1:866582134847:web:0c40d1a626422d6816788a",
+  measurementId: "G-XVNTZ10NWw"
 };

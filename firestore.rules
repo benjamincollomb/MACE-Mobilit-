@@ -4,7 +4,7 @@ service cloud.firestore {
     // Remplacer le texte par l'UID de VOTRE compte, trouvé dans
     // Firebase Console > Authentication > Users.
     function isAdmin() {
-      return request.auth != null && request.auth.uid == 'REMPLACER_PAR_VOTRE_UID';
+      return request.auth != null && request.auth.uid == 'xeKXUePGh6eiD155UFhqusLW42y1';
     }
     function isPublicCollection(name) {
       return name in ['vehicles', 'lines', 'news'];
