@@ -68,3 +68,7 @@ Dans **Direction → Véhicules → Ajouter / Modifier**, les champs supplément
 Les visiteurs ouvrent une fiche en cliquant sur **Voir la fiche du véhicule** dans la section Flotte ; la direction peut aussi cliquer sur **Fiche** dans son tableau. Les fiches affichent « Non renseigné » pour les anciennes données absentes.
 
 Les nouveaux champs sont enregistrés dans le même document Firestore `company/mace-mobilite/vehicles/{id}` : aucune nouvelle collection ni modification des règles Firestore n'est nécessaire. La saisie est manuelle : il n'existe pas de synchronisation automatique avec Transport Manager.
+
+### Statuts véhicules
+
+Les véhicules peuvent être marqués **En service**, **Disponible**, **Indisponible**, **Non immatriculé** ou **En maintenance**. Ces valeurs sont sauvegardées dans le champ `status` existant de Firestore et ne nécessitent pas de migration.
