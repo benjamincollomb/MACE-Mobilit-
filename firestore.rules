@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Remplacer le texte par l'UID de VOTRE compte, trouvé dans
+    // Firebase Console > Authentication > Users.
+    function isAdmin() {
+      return request.auth != null && request.auth.uid == 'REMPLACER_PAR_VOTRE_UID';
+    }
+    function isPublicCollection(name) {
+      return name in ['vehicles', 'lines', 'news'];
+    }
+    match /company/{companyId}/{collectionName}/{documentId} {
+      allow read: if (companyId == 'mace-mobilite' && isPublicCollection(collectionName)) || isAdmin();
+      allow create, update, delete: if isAdmin();
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
