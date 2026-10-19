@@ -53,3 +53,11 @@ python3 -m http.server 8000
 ```
 
 Ouvrir http://localhost:8000/.
+
+
+## Logo officiel – correctif
+
+Le logo utilise l'URL publique Fivemanage fournie par le propriétaire, avec une copie de secours dans `assets/mace-logo.png`.
+Pour GitHub Pages, **envoyez les fichiers à la racine du dépôt**, et non le dossier `mace-mobilite` lui-même.
+La structure attendue est `index.html`, `styles.css`, `app.js`, `firebase-config.js` et `assets/mace-logo.png`.
+Si la mise à jour n'apparaît pas, attendez le déploiement GitHub Pages puis forcez l'actualisation (Ctrl+F5).
