@@ -196,6 +196,21 @@
     </div>
   </div>
 
+  <div id="vehicleModal" class="modal-overlay" hidden>
+    <section class="modal vehicle-dialog" role="dialog" aria-modal="true" aria-labelledby="vehicleModalTitle">
+      <button id="closeVehicleModal" class="close-modal" aria-label="Fermer la fiche véhicule">✕</button>
+      <span class="kicker">MACE MOBILITÉ · FICHE VÉHICULE</span>
+      <div class="vehicle-dialog-header">
+        <div class="vehicle-dialog-mark">🚌</div>
+        <div><span class="vehicle-code" id="vehicleModalCode"></span><h2 id="vehicleModalTitle">Véhicule</h2><p id="vehicleModalIntro"></p></div>
+      </div>
+      <div class="vehicle-line-banner"><span>Ligne affectée</span><strong id="vehicleModalLine"></strong></div>
+      <h3 class="vehicle-dialog-subtitle">Caractéristiques & suivi technique</h3>
+      <div id="vehicleModalSpecs" class="vehicle-spec-grid"></div>
+      <p class="vehicle-dialog-note">Informations fournies par MACE Mobilité dans le cadre du jeu Transport Manager.</p>
+    </section>
+  </div>
+
   <div id="editModal" class="modal-overlay" hidden>
     <div class="modal editor-dialog">
       <button id="closeEditor" class="close-modal" aria-label="Fermer">✕</button>

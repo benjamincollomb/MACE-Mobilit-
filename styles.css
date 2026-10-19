@@ -766,3 +766,23 @@ input:focus, select:focus, textarea:focus {
   .topbar-actions { justify-content: stretch; flex-wrap: wrap; }
   .topbar-actions .btn { flex: 1; }
 }
+
+/* Fiche détaillée des véhicules */
+.vehicle-details-link{margin-top:18px;width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;border:1px solid rgba(6,45,93,.16);background:#f2f8ff;color:var(--navy);font-weight:800;transition:background .2s,transform .2s}
+.vehicle-details-link:hover{background:#e4f0ff;transform:translateY(-1px)}
+.vehicle-dialog{width:min(100%,720px);max-height:min(88vh,850px);overflow-y:auto;padding:34px}
+.vehicle-dialog .kicker{margin-bottom:20px}
+.vehicle-dialog-header{display:flex;align-items:center;gap:18px}
+.vehicle-dialog-mark{width:76px;height:76px;display:grid;place-items:center;flex:none;border-radius:22px;background:linear-gradient(135deg,var(--navy),var(--navy-soft));font-size:2.3rem}
+.vehicle-code{color:var(--green);font-weight:800;font-size:.82rem;letter-spacing:.12em}
+.vehicle-dialog-header h2{margin:5px 0 7px;font-size:clamp(1.45rem,4vw,2.2rem)}
+.vehicle-dialog-header p{margin:0;color:var(--muted)}
+.vehicle-line-banner{margin:24px 0;background:var(--blue-surface);padding:16px 20px;border-radius:18px;display:flex;gap:16px;justify-content:space-between;align-items:center}
+.vehicle-line-banner span{color:var(--muted);font-weight:700}.vehicle-line-banner strong{color:var(--navy)}
+.vehicle-dialog-subtitle{font-size:1.12rem;letter-spacing:-.01em;margin:0 0 14px}
+.vehicle-spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.spec-cell{border:1px solid var(--border);background:#fbfdff;border-radius:16px;padding:17px;min-width:0}
+.spec-cell span{display:block;color:var(--muted);font-weight:700;font-size:.83rem;margin-bottom:9px}
+.spec-cell strong{display:block;overflow-wrap:anywhere;color:var(--navy);font-size:1rem}
+.vehicle-dialog-note{font-size:.8rem;color:var(--muted);margin:18px 0 0}
+@media(max-width:540px){.vehicle-dialog{padding:20px}.vehicle-dialog-header{align-items:flex-start}.vehicle-dialog-mark{width:55px;height:55px;font-size:1.6rem}.vehicle-spec-grid{grid-template-columns:1fr}}

@@ -61,3 +61,10 @@ Le logo utilise l'URL publique Fivemanage fournie par le propriétaire, avec une
 Pour GitHub Pages, **envoyez les fichiers à la racine du dépôt**, et non le dossier `mace-mobilite` lui-même.
 La structure attendue est `index.html`, `styles.css`, `app.js`, `firebase-config.js` et `assets/mace-logo.png`.
 Si la mise à jour n'apparaît pas, attendez le déploiement GitHub Pages puis forcez l'actualisation (Ctrl+F5).
+
+## Fiche détaillée des bus (mise à jour)
+Dans **Direction → Véhicules → Ajouter / Modifier**, les champs supplémentaires sont : motorisation, immatriculation, mise en service, kilométrage, dernière révision et prochain contrôle technique. Les champs sont facultatifs pour ne pas bloquer les véhicules existants.
+
+Les visiteurs ouvrent une fiche en cliquant sur **Voir la fiche du véhicule** dans la section Flotte ; la direction peut aussi cliquer sur **Fiche** dans son tableau. Les fiches affichent « Non renseigné » pour les anciennes données absentes.
+
+Les nouveaux champs sont enregistrés dans le même document Firestore `company/mace-mobilite/vehicles/{id}` : aucune nouvelle collection ni modification des règles Firestore n'est nécessaire. La saisie est manuelle : il n'existe pas de synchronisation automatique avec Transport Manager.
