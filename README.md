@@ -98,3 +98,10 @@ Remplacer tous les fichiers à la racine du dépôt GitHub Pages. Les collection
 - Les versements d'emprunt et les remboursements sont exclus du résultat d'exploitation, mais pris en compte dans le flux de trésorerie (simplifié).
 - Les fiches de prêts sont enregistrées dans la collection privée `company/mace-mobilite/loans`. Les règles Firestore déjà fournies (accès admin uniquement aux collections non publiques) fonctionnent sans ajout de lecture publique.
 - Sauvegardez les fichiers à la racine du dépôt GitHub et veillez à conserver votre configuration Firebase.
+
+## Photos hébergées sur FiveManage (V5)
+Dans **Espace direction → Véhicules** ou **Équipe publique**, utilisez le champ **URL de la photo (FiveManage)**. Collez un lien HTTPS direct vers un JPG, PNG ou WebP. L'image est chargée depuis FiveManage côté visiteur ; seul le texte de son URL est enregistré dans Firestore. Les champs peuvent rester vides. Il n'est pas nécessaire de modifier les règles Firestore. Les images doivent être publiques et accessibles sans connexion.
+
+
+## Correctif V6 — Prêts et remboursements
+Dans Finances, choisir la catégorie **Prêt** ou **Remboursement de prêt** affiche maintenant un menu obligatoire **Prêt associé**. Pour recevoir un emprunt, commencer par créer une fiche dans l'onglet Prêts, puis ajouter une recette catégorie Prêt liée à cette fiche. Pour rembourser, cliquer sur **Saisir remboursement** dans la fiche de prêt : le prêt, la catégorie et le type sont préremplis. L'ajout ou la suppression d'une opération met les chiffres du prêt à jour après la synchronisation Firestore. Si aucun prêt n'apparaît dans le menu, en créer un d'abord.
