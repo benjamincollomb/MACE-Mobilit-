@@ -86,3 +86,15 @@ Le fichier `firestore.rules` dans le ZIP autorise la consultation publique des c
 
 ### Mise à jour sans perdre les données
 Remplacer tous les fichiers à la racine du dépôt GitHub Pages. Les collections existantes ne sont ni effacées ni renommées. Les nouveaux champs des employés apparaîtront progressivement au fil des modifications.
+
+
+## V4 — Finances et prêts
+
+- Dans **Direction → Finances**, recherche libre, filtres par catégorie, type et année, montants des recettes en vert et dépenses en rouge. Les KPIs sont calculés sur les écritures filtrées.
+- Dans **Direction → Prêts et remboursements**, crée une fiche avec prêteur, référence, capital prévu, taux annuel et date.
+- Pour constater l'argent réellement reçu, ajoute dans **Finances** une opération de type **Recette**, catégorie **Prêt**, puis sélectionne le prêt correspondant. Chaque écriture augmente son « capital emprunté (encaissé) ».
+- Pour suivre une échéance, ajoute une opération de type **Dépense**, catégorie **Remboursement de prêt**, et sélectionne le même prêt. Le tableau affiche alors le remboursement cumulé et le solde restant.
+- Le **total à rembourser estimatif** utilise un **intérêt forfaitaire d'une année** : capital encaissé × (1 + taux annuel / 100). Ce n'est **pas** un amortissement bancaire précis : les échéances, les dates, la capitalisation des intérêts et les frais ne sont pas pris en compte.
+- Les versements d'emprunt et les remboursements sont exclus du résultat d'exploitation, mais pris en compte dans le flux de trésorerie (simplifié).
+- Les fiches de prêts sont enregistrées dans la collection privée `company/mace-mobilite/loans`. Les règles Firestore déjà fournies (accès admin uniquement aux collections non publiques) fonctionnent sans ajout de lecture publique.
+- Sauvegardez les fichiers à la racine du dépôt GitHub et veillez à conserver votre configuration Firebase.
