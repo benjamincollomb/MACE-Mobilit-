@@ -72,3 +72,17 @@ Les nouveaux champs sont enregistrés dans le même document Firestore `company/
 ### Statuts véhicules
 
 Les véhicules peuvent être marqués **En service**, **Disponible**, **Indisponible**, **Non immatriculé** ou **En maintenance**. Ces valeurs sont sauvegardées dans le champ `status` existant de Firestore et ne nécessitent pas de migration.
+
+## V3 — nouveaux modules
+- Journal : cartes avec extraits, clic sur « Lire l’article » pour voir un article entier, avec paragraphes séparés par des lignes vides.
+- Personnel : champ Statut (En service, En vacances, Malade, En congé, En repos, En formation, Indisponible, En attente d’affectation). Ces statuts privés ne sont pas exposés aux visiteurs.
+- Tarifs : collection Firestore `company/mace-mobilite/tickets` ; gestion des billets depuis l'espace direction.
+- Histoire : collection `company/mace-mobilite/history` ; possibilité de créer des entrées chronologiques.
+- Équipe publique : collection `company/mace-mobilite/team` ; membres publiés volontairement, séparés de `staff` (salaires et absences privés).
+- Les fenêtres de lecture et d’édition sont désormais défilables à l’intérieur de l’écran.
+
+### Obligatoire : publier les nouvelles règles Firestore
+Le fichier `firestore.rules` dans le ZIP autorise la consultation publique des collections `tickets`, `history` et `team`, mais seules les personnes dont l’UID correspond à celui renseigné peuvent modifier les données. Pour activer ces 3 nouvelles rubriques, copier **le contenu entier** de `firestore.rules` dans Firebase Console > Firestore Database > Règles puis cliquer sur **Publier**. Un dépôt GitHub ne publie pas automatiquement ces règles. Ne jamais publier de salaires, de données personnelles privées ou de statuts d'absence dans la collection `team`.
+
+### Mise à jour sans perdre les données
+Remplacer tous les fichiers à la racine du dépôt GitHub Pages. Les collections existantes ne sont ni effacées ni renommées. Les nouveaux champs des employés apparaîtront progressivement au fil des modifications.

@@ -22,7 +22,7 @@
       <a href="#accueil" class="navlink active">Accueil</a>
       <a href="#reseau" class="navlink">Réseau</a>
       <a href="#flotte" class="navlink">Flotte</a>
-      <a href="#actualites" class="navlink">Actualités</a>
+      <a href="#actualites" class="navlink">Actualités</a><a href="#tarifs" class="navlink">Tarifs</a><a href="#histoire" class="navlink">Notre histoire</a><a href="#equipe" class="navlink">Notre équipe</a>
     </nav>
 
     <div class="topbar-actions">
@@ -114,9 +114,13 @@
         </div>
         <span class="section-accent">03 · ACTUALITÉS</span>
       </div>
-      <div id="publicNews" class="cards-three"></div>
+      <div id="publicNews" class="news-layout"></div>
     </section>
 
+
+    <section class="section alt" id="tarifs"><div class="container"><div class="section-head"><div><span class="kicker">BILLETTERIE</span><h2>Des tarifs <em>clairs et accessibles.</em></h2><p>Découvrez les tarifs affichés par MACE Mobilité dans Transport Manager.</p></div><span class="section-accent">04 · TARIFS</span></div><div id="publicTickets" class="cards-three"></div><p class="public-disclaimer">Tarifs virtuels liés au jeu Transport Manager. Aucune vente de billet sur ce site.</p></div></section>
+    <section class="section container" id="histoire"><div class="section-head"><div><span class="kicker">LA COMPAGNIE</span><h2>Notre <em>histoire.</em></h2><p>Découvrez le parcours et les ambitions de MACE Mobilité.</p></div><span class="section-accent">05 · HISTOIRE</span></div><div id="publicHistory" class="history-panel"></div></section>
+    <section class="section alt" id="equipe"><div class="container"><div class="section-head"><div><span class="kicker">LES VISAGES DE MACE</span><h2>Notre <em>équipe.</em></h2><p>Les collaborateurs que la direction souhaite présenter au public.</p></div><span class="section-accent">06 · ÉQUIPE</span></div><div id="publicTeam" class="cards-three"></div></div></section>
     <section class="brand-band" id="configuration">
       <div class="container brand-band-inner">
         <div>
@@ -148,7 +152,7 @@
         <button data-tab="lines" class="side-item">⌁ <span>Lignes</span></button>
         <button data-tab="staff" class="side-item">♙ <span>Personnel</span></button>
         <button data-tab="finance" class="side-item">◈ <span>Finances</span></button>
-        <button data-tab="news" class="side-item">☷ <span>Actualités</span></button>
+        <button data-tab="news" class="side-item">☷ <span>Actualités</span></button><button data-tab="tickets" class="side-item">◈ <span>Tarifs des billets</span></button><button data-tab="history" class="side-item">▤ <span>Histoire</span></button><button data-tab="team" class="side-item">♧ <span>Équipe publique</span></button>
       </div>
 
       <div class="sidebar-bottom">
@@ -211,6 +215,7 @@
     </section>
   </div>
 
+  <div id="articleModal" class="modal-overlay" hidden><article class="modal article-dialog" role="dialog" aria-modal="true" aria-labelledby="articleTitle"><button id="closeArticle" class="close-modal" aria-label="Fermer l'article">✕</button><span class="kicker">LE JOURNAL DE MACE MOBILITÉ</span><p class="article-date" id="articleDate"></p><h2 id="articleTitle"></h2><div class="article-divider"></div><div id="articleBody" class="article-body"></div><div class="article-endmark">MACE MOBILITÉ <span>·</span> VOTRE RÉSEAU, VOTRE MOBILITÉ.</div></article></div>
   <div id="editModal" class="modal-overlay" hidden>
     <div class="modal editor-dialog">
       <button id="closeEditor" class="close-modal" aria-label="Fermer">✕</button>

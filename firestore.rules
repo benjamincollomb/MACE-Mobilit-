@@ -7,7 +7,7 @@ service cloud.firestore {
       return request.auth != null && request.auth.uid == 'xeKXUePGh6eiD155UFhqusLW42y1';
     }
     function isPublicCollection(name) {
-      return name in ['vehicles', 'lines', 'news'];
+      return name in ['vehicles', 'lines', 'news', 'tickets', 'history', 'team'];
     }
     match /company/{companyId}/{collectionName}/{documentId} {
       allow read: if (companyId == 'mace-mobilite' && isPublicCollection(collectionName)) || isAdmin();

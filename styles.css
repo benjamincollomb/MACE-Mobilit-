@@ -786,3 +786,50 @@ input:focus, select:focus, textarea:focus {
 .spec-cell strong{display:block;overflow-wrap:anywhere;color:var(--navy);font-size:1rem}
 .vehicle-dialog-note{font-size:.8rem;color:var(--muted);margin:18px 0 0}
 @media(max-width:540px){.vehicle-dialog{padding:20px}.vehicle-dialog-header{align-items:flex-start}.vehicle-dialog-mark{width:55px;height:55px;font-size:1.6rem}.vehicle-spec-grid{grid-template-columns:1fr}}
+
+/* V3 — navigation, magazine et fenêtres confortables */
+#nav{gap:16px;flex-wrap:wrap;justify-content:center}
+.navlink{font-size:.84rem}
+.topbar{gap:16px}
+.news-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.news-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid rgba(6,45,93,.11);border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);transition:transform .18s,box-shadow .18s}
+.news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.news-featured{grid-column:span 2;background:linear-gradient(125deg,#062d5d,#0b467f);color:#fff;padding:36px 40px}
+.news-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#6d849b}
+.news-featured .news-top{color:#b9d6f0}
+.news-card h3{font-size:clamp(1.35rem,2.3vw,2rem);line-height:1.3;overflow-wrap:anywhere;margin:0 0 16px;color:var(--navy-deep)}
+.news-featured h3{color:#fff;font-size:clamp(1.7rem,3vw,2.75rem);max-width:780px}
+.news-excerpt{color:#52677c;font-size:1rem;line-height:1.85;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.news-featured .news-excerpt{color:#d9e9f9;max-width:800px}
+.article-open{margin-top:auto;align-self:flex-start;border:0;border-bottom:2px solid var(--green);color:var(--navy);font-weight:800;background:transparent;padding:14px 0 8px;font-size:.94rem}
+.news-featured .article-open{color:#fff}
+.article-open span{margin-left:20px}
+.article-dialog{width:min(100%,850px);max-height:90dvh;overflow-y:auto;overscroll-behavior:contain;padding:clamp(24px,5vw,58px);scrollbar-gutter:stable}
+.article-dialog .kicker{margin:0 45px 16px 0}.article-dialog h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.2;margin:15px 0 25px;overflow-wrap:anywhere}
+.article-date{color:var(--muted);font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.article-divider{width:90px;height:5px;background:var(--green);border-radius:12px;margin:28px 0}
+.article-body{font-size:1.08rem;color:#344f69;line-height:1.95;overflow-wrap:anywhere;white-space:normal}
+.article-body p{margin-bottom:23px}.article-body p:first-child{font-weight:600;font-size:1.16rem}
+.article-endmark{border-top:1px solid var(--border);padding-top:22px;margin-top:30px;color:var(--navy);font-size:.8rem;font-weight:800;letter-spacing:.08em}
+.article-endmark span{color:var(--green);padding:0 7px}
+#tarifs,#histoire,#equipe{scroll-margin-top:100px}
+.ticket-card{position:relative;overflow:hidden;border-top:5px solid var(--green)}
+.ticket-price{font:800 2.5rem Manrope,Arial,sans-serif;color:var(--navy);padding:8px 0 14px}
+.ticket-card p{min-height:42px}
+.public-disclaimer{margin-top:18px;color:var(--muted);font-size:.88rem}
+.history-panel{background:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow-soft);display:grid;gap:18px}
+.history-entry{display:grid;grid-template-columns:200px minmax(0,1fr);gap:25px;padding:24px 0;border-bottom:1px solid var(--border)}
+.history-entry:last-child{border-bottom:0}.history-entry h3{font-size:1.45rem;margin:0 0 12px}.history-entry p{margin:0;color:#53687e;overflow-wrap:anywhere}.history-entry p+p{margin-top:12px}
+.history-period{font-size:.82rem;font-weight:800;color:var(--navy-soft);letter-spacing:.1em;text-transform:uppercase}
+.team-card{display:flex;flex-direction:column;align-items:flex-start}.team-monogram{width:64px;height:64px;border-radius:20px;background:linear-gradient(125deg,var(--navy),var(--green));color:#fff;display:grid;place-items:center;font-size:1.6rem;font-weight:900}
+.team-card h3{margin:20px 0 5px}.team-role{color:#399a33;margin-bottom:13px}.team-card p{white-space:pre-line;overflow-wrap:anywhere}
+/* All dialogs: predictable scroll without trapping long forms below screen */
+.modal-overlay{overflow-y:auto;overscroll-behavior:contain;align-items:center}
+.modal{max-height:90dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.editor-dialog{width:min(100%,700px)}
+.editor-dialog .fields{gap:20px}.editor-dialog .fields label{min-width:0}
+.editor-dialog .modal-actions{position:sticky;bottom:-28px;z-index:2;background:#fff;padding:15px 0 4px;border-top:1px solid var(--border)}
+input,textarea,select{max-width:100%}
+@media(max-width:1170px){.topbar{flex-wrap:wrap;height:auto;min-height:88px;padding:12px 24px}.topbar #nav{order:3;width:100%;justify-content:center;padding:4px 0 8px}}
+@media(max-width:860px){#nav{display:none!important}#nav.open{display:flex!important;flex-direction:column;align-items:stretch;gap:14px}.topbar #nav{order:10}.news-layout{grid-template-columns:1fr}.news-featured{grid-column:span 1}.news-featured{padding:28px}.history-entry{grid-template-columns:1fr;gap:8px}}
+@media(max-width:640px){.article-dialog{padding:26px 18px}.news-card{padding:22px}.news-top{align-items:flex-start;flex-direction:column}.editor-dialog .modal-actions{bottom:-20px}}
