@@ -112,3 +112,7 @@ Le JavaScript est désormais distribué dans `app-v8.js` (au lieu de `app.js`),
 pour éviter qu'une ancienne version de `app.js` en cache masque les dernières corrections.
 Supprimez l'ancien `app.js` du dépôt lors de la mise à jour, puis vérifiez la présence
 de la mention « MACE Mobilité · V8.1 » en bas à gauche du site.
+
+
+## Version 10 — Durée des prêts
+Dans Direction → Prêts → Ajouter/Modifier, remplir la **Durée du prêt (en mois)**, par exemple 60 pour cinq ans. Le tableau affiche la durée, la mensualité indicative, les intérêts totaux estimés et la date de fin calculée à partir de la date de souscription. L'estimation utilise un taux nominal annuel et des mensualités constantes, **sans** frais d'assurance ni frais bancaires. La somme réellement encaissée depuis Finances (catégorie Prêt) sert de base aux calculs ; les remboursements enregistrés diminuent le montant estimé restant. Les prêts existants restent compatibles : compléter leur durée pour passer au nouveau calcul. Aucun changement aux règles Firebase requis.
