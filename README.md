@@ -128,3 +128,7 @@ Pour les prêts existants, le mode fixe devient le mode par défaut ; vérifiez 
 
 ## V12 – Fiches de lignes
 Dans Direction → Lignes, modifier une ligne pour renseigner la distance (km), le temps de trajet (minutes), le nombre d’arrêts, les noms des arrêts (un par ligne), la présence de bornes de recharge et le lien HTTPS du plan sur FiveManage. Chaque carte du Réseau public propose désormais « Voir la fiche de la ligne ». Les nouvelles données sont de simples champs dans la collection `lines` existante ; les règles Firestore n’ont pas besoin de changer.
+
+
+## V13 – Personnel
+Nouvelles données privées : numéro employé, date d'embauche, métier, type de contrat (100 %, 50 %, intérimaire), fin de contrat intérimaire, FCO et expiration. Les informations restent dans la collection `staff` privée. Les salariés déjà enregistrés sont conservés. Déployer `app-v13.js` et `index.html` ensemble.
