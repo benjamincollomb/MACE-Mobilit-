@@ -125,3 +125,6 @@ Exemple : 300 000 CHF, 5 %, 12 mois ⇒ intérêts 15 000 CHF, total 315 000 CHF
 Le mode « Banque (mensualités amortissables) » reste possible. Ce modèle
 reproduit l'exemple donné dans le jeu mais ne garantit pas la méthode du jeu pour toutes les durées.
 Pour les prêts existants, le mode fixe devient le mode par défaut ; vérifiez les montants.
+
+## V12 – Fiches de lignes
+Dans Direction → Lignes, modifier une ligne pour renseigner la distance (km), le temps de trajet (minutes), le nombre d’arrêts, les noms des arrêts (un par ligne), la présence de bornes de recharge et le lien HTTPS du plan sur FiveManage. Chaque carte du Réseau public propose désormais « Voir la fiche de la ligne ». Les nouvelles données sont de simples champs dans la collection `lines` existante ; les règles Firestore n’ont pas besoin de changer.

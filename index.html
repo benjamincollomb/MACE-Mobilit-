@@ -231,6 +231,16 @@
     </div>
   </div>
 
+  <div id="lineModal" class="modal-overlay" hidden>
+    <section class="modal route-dialog" role="dialog" aria-modal="true" aria-labelledby="lineModalTitle">
+      <button class="close-modal" id="closeLine" type="button" aria-label="Fermer">✕</button>
+      <span class="kicker">MACE MOBILITÉ · NOTRE RÉSEAU</span>
+      <div class="line-heading"><span class="route-badge" id="lineModalNumber">Ligne</span><div><h2 id="lineModalTitle">Fiche de ligne</h2><p id="lineModalRoute"></p></div></div>
+      <div id="lineModalInfo" class="route-spec-grid"></div>
+      <h3>Plan de la ligne</h3><div id="lineModalMap" class="route-map"></div>
+      <h3>Les arrêts</h3><div id="lineModalStops"></div>
+    </section>
+  </div>
   <div id="toast" role="status" class="toast" hidden></div>
 
   <footer id="siteFooter">
@@ -247,7 +257,7 @@
     </div>
   </footer>
 
-  <script type="module" src="app-v11.js?v=11.0"></script>
+  <script type="module" src="app-v12.js?v=12.0"></script>
 <div class="site-version" aria-label="Version du site">MACE Mobilité · V11.0</div>
 </body>
 </html>
