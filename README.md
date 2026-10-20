@@ -105,3 +105,10 @@ Dans **Espace direction → Véhicules** ou **Équipe publique**, utilisez le ch
 
 ## Correctif V6 — Prêts et remboursements
 Dans Finances, choisir la catégorie **Prêt** ou **Remboursement de prêt** affiche maintenant un menu obligatoire **Prêt associé**. Pour recevoir un emprunt, commencer par créer une fiche dans l'onglet Prêts, puis ajouter une recette catégorie Prêt liée à cette fiche. Pour rembourser, cliquer sur **Saisir remboursement** dans la fiche de prêt : le prêt, la catégorie et le type sont préremplis. L'ajout ou la suppression d'une opération met les chiffres du prêt à jour après la synchronisation Firestore. Si aucun prêt n'apparaît dans le menu, en créer un d'abord.
+
+
+## V8.1 — correction du chargement
+Le JavaScript est désormais distribué dans `app-v8.js` (au lieu de `app.js`),
+pour éviter qu'une ancienne version de `app.js` en cache masque les dernières corrections.
+Supprimez l'ancien `app.js` du dépôt lors de la mise à jour, puis vérifiez la présence
+de la mention « MACE Mobilité · V8.1 » en bas à gauche du site.
