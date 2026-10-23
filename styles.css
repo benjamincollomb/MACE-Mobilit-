@@ -879,3 +879,5 @@ input,textarea,select{max-width:100%}
 .tm-fin-total.positive{color:#33df9a!important}.tm-fin-total.negative{color:#ff5c75!important}
 @media(max-width:1000px){.tm-fin-grid{grid-template-columns:1fr}}
 @media(max-width:580px){.tm-fin-panel{padding:21px 15px}.tm-fin-row{font-size:.8rem;gap:6px}}
+
+.month-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#eff6ff;border-radius:16px;padding:16px;margin-bottom:20px}.month-toolbar select{min-width:200px}.month-toolbar span{color:#52667d;max-width:540px}.tm-fin-panel .finance-help{font-size:.79rem;opacity:.8}

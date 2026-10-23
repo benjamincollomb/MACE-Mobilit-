@@ -144,3 +144,20 @@ La clôture est définitive depuis l'interface : un contrat terminé n'est plus 
 
 ## V15 — Présentation des finances par catégories
 Deux colonnes Recettes et Dépenses suivant les intitulés de Transport Manager, charges fixes distinctes, total et écritures filtrables en dessous. Les catégories ajoutées sont disponibles lors de la saisie. Les données historiques sont conservées : les anciennes catégories principales sont regroupées visuellement sous les nouveaux intitulés. Les montants sont saisis manuellement ; aucune écriture automatique de charges fixes n’est créée. Les emprunts sont exclus des recettes d’exploitation et leurs remboursements du total des dépenses d’exploitation.
+
+
+## V16 Budget mensuel
+- Un budget de charges fixes (salaires, loyers, etc.) est défini par l'administrateur dans Finances.
+- Collection Firestore privée `fixedCosts` ; les règles incluses autorisent l'UID administrateur.
+- Chaque mois les tableaux **réels** repartent à zéro par filtre automatique sur les dates : aucune donnée historique n'est détruite.
+- Navigation parmi les six derniers mois. Les opérations plus anciennes demeurent en base, afin de préserver les justificatifs, le suivi des prêts et la traçabilité des contrats publicitaires. Elles ne sont pas purgées automatiquement.
+- Le montant des charges fixes est prévisionnel seulement : une saisie réelle correspondante dans le journal reste nécessaire pour le suivi des paiements.
+- Remplacer `index.html`, `app-v16.js`, `styles.css`, puis mettre à jour les règles Firestore si votre version actuelle refuse `fixedCosts`.
+
+
+## V17 : report automatique des charges fixes
+À la première ouverture de l'espace Direction au cours d'un mois, chaque charge fixe active (> 0 CHF) génère une dépense datée du 1er de ce mois dans `finance`. Un identifiant stable par charge et mois et une transaction Firestore empêchent les doublons, y compris si deux sessions s'ouvrent simultanément. Les montants figurent dans les comptes réels du mois et le budget prévisionnel reste affiché séparément. La modification d'une charge s'applique aux prochains reports; elle ne réécrit pas les opérations déjà effectuées. Aucun mois antérieur n'est généré rétroactivement.
+
+**Limite importante :** GitHub Pages est statique. Si aucun administrateur ne se connecte, le report ne se lance pas exactement le 1er. La première visite direction ultérieure crée l'opération avec la date comptable du 1er. Pour une exécution garantie le 1er sans visite, il faudrait une tâche planifiée côté serveur.
+
+Les remboursements de prêts à échéance fixe peuvent être saisis dans « Remboursement d’emprunt jeu » mais ceci n’ajuste pas automatiquement les soldes dans le module Prêts. Ne comptabilisez pas aussi manuellement la même dépense.
