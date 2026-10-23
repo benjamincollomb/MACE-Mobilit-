@@ -132,3 +132,11 @@ Dans Direction → Lignes, modifier une ligne pour renseigner la distance (km), 
 
 ## V13 – Personnel
 Nouvelles données privées : numéro employé, date d'embauche, métier, type de contrat (100 %, 50 %, intérimaire), fin de contrat intérimaire, FCO et expiration. Les informations restent dans la collection `staff` privée. Les salariés déjà enregistrés sont conservés. Déployer `app-v13.js` et `index.html` ensemble.
+
+
+## V14 — Contrats publicitaires
+Dans **Direction → Contrats publicitaires**, créez un contrat en indiquant l'annonceur, la raison, le type de publicité, le nombre d'affichages, les dates, le prix et les véhicules associés (sélection multiple). **Consulter le contrat** affiche un récapitulatif détaillé. **Terminer le contrat** ajoute une unique recette dans `finance` (catégorie `Publicité`) et passe le contrat à l'état `Terminé`. Cette opération est atomique avec Firestore via `runTransaction`. Les contrats et finances sont privés.
+
+**OBLIGATOIRE :** publier le fichier `firestore.rules` dans Firebase Console → Firestore Database → Règles (les contrats `advertising` utilisent les mêmes droits administrateur ; ils ne sont pas publics).
+
+La clôture est définitive depuis l'interface : un contrat terminé n'est plus modifiable, et son écriture financière est protégée contre la modification et la suppression dans l'interface. Pour une comptabilité réelle, une protection serveur supplémentaire serait souhaitable.
