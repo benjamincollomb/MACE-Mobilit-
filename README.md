@@ -140,3 +140,7 @@ Dans **Direction → Contrats publicitaires**, créez un contrat en indiquant l'
 **OBLIGATOIRE :** publier le fichier `firestore.rules` dans Firebase Console → Firestore Database → Règles (les contrats `advertising` utilisent les mêmes droits administrateur ; ils ne sont pas publics).
 
 La clôture est définitive depuis l'interface : un contrat terminé n'est plus modifiable, et son écriture financière est protégée contre la modification et la suppression dans l'interface. Pour une comptabilité réelle, une protection serveur supplémentaire serait souhaitable.
+
+
+## V15 — Présentation des finances par catégories
+Deux colonnes Recettes et Dépenses suivant les intitulés de Transport Manager, charges fixes distinctes, total et écritures filtrables en dessous. Les catégories ajoutées sont disponibles lors de la saisie. Les données historiques sont conservées : les anciennes catégories principales sont regroupées visuellement sous les nouveaux intitulés. Les montants sont saisis manuellement ; aucune écriture automatique de charges fixes n’est créée. Les emprunts sont exclus des recettes d’exploitation et leurs remboursements du total des dépenses d’exploitation.

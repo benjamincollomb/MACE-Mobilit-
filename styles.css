@@ -864,3 +864,18 @@ input,textarea,select{max-width:100%}
 
 /* V14 — contrats publicitaires */
 .ad-contracts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}.ad-contract-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.ad-contract-header h3{margin:14px 0 4px}.ad-contract-header p{color:#65758a}.ad-price{white-space:nowrap;color:#178546}.ad-summary{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.ad-summary span{padding:7px 10px;border-radius:10px;background:#edf5ff;font-size:13px;color:#123b65}.ad-modal{width:min(92vw,760px);max-height:88dvh;overflow-y:auto;scrollbar-gutter:stable}.ad-form h3,.ad-details h3{margin:22px 0 12px;padding-bottom:8px;border-bottom:1px solid #d9e5f0}.ad-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.ad-vehicle-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;max-height:210px;overflow-y:auto;border:1px solid #d9e5f0;padding:10px;border-radius:12px}.ad-vehicle-option{display:flex;align-items:center;gap:12px;background:#f4f8ff;border-radius:10px;padding:10px;cursor:pointer}.ad-vehicle-option input{width:18px;height:18px;flex:0 0 auto}.ad-vehicle-option small{color:#65758a}.ad-details .loan-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.ad-details .loan-fields>div{padding:12px;border-radius:12px;background:#f5f9ff}.ad-details .loan-fields small{display:block;color:#64758b;margin-bottom:6px}.ad-details .loan-fields strong{overflow-wrap:anywhere}.ad-modal .modal-actions{position:sticky;bottom:-28px;padding:14px 0;background:white}.ad-contract .loan-actions{flex-wrap:wrap}
+
+/* V15 — tableau financier Transport Manager */
+.tm-fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.tm-fin-panel{background:#1e293b;color:#f7fafc;border:1px solid #485368;border-top:2px solid #cc7b3e;border-radius:8px;padding:30px 30px 24px;box-shadow:0 16px 30px #0d1f3920}
+.tm-fin-panel h2{font-size:1.55rem;color:white;margin-bottom:32px;letter-spacing:0}
+.tm-fin-panel h3{font-size:1rem;color:#fff;margin-bottom:12px;letter-spacing:0}
+.tm-fin-panel .tm-fixed-heading{margin-top:30px}
+.tm-fin-row{display:flex;gap:12px;align-items:baseline;margin:0 0 10px;font-size:.91rem;color:#f6f8fc}
+.tm-fin-row>span{min-width:0;overflow-wrap:anywhere}
+.tm-fin-row i{height:1px;align-self:center;border-bottom:1px dotted #8491a4;flex:1;min-width:8px}
+.tm-fin-row strong{white-space:nowrap;font-variant-numeric:tabular-nums;font-size:.92rem}
+.tm-fin-total{display:flex;justify-content:space-between;gap:14px;margin-top:30px;padding:17px 14px;background:#0e182c;border-radius:5px;font-weight:800;font-variant-numeric:tabular-nums}
+.tm-fin-total.positive{color:#33df9a!important}.tm-fin-total.negative{color:#ff5c75!important}
+@media(max-width:1000px){.tm-fin-grid{grid-template-columns:1fr}}
+@media(max-width:580px){.tm-fin-panel{padding:21px 15px}.tm-fin-row{font-size:.8rem;gap:6px}}
